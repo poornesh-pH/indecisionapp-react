@@ -36,7 +36,7 @@ export default class App extends Component {
     localStorage.setItem("options", json);
   }
   render() {
-    const title = "Indecision App";
+    const title = "IndecisionApp";
     const clearOptions = () => {
       this.setState(() => {
         return {
@@ -47,7 +47,7 @@ export default class App extends Component {
       });
     };
     const hasOptions = () => {
-      if (this.state.options) return true;
+      if (this.state.options !== null) return true;
       else return false;
     };
     const handlePick = () => {
@@ -74,13 +74,14 @@ export default class App extends Component {
             error: "Item already exists"
           };
         });
-      } else if (hasOptions()) {
-        this.setState((prevState) => {
-          return {
-            options: prevState.options.concat(option),
-            error: null
-          };
-        });
+      } else {
+        // this.setState((prevState) => {
+        //   return {
+        //     options: prevState.options.concat(option),
+        //     error: null
+        //   };
+        // });
+ 
       }
     };
     const removeOption = (option) => {
@@ -95,7 +96,6 @@ export default class App extends Component {
         return { do: null };
       });
     };
-
     return (
       <div>
         <Header title={title} />
