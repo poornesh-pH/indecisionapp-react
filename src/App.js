@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import "./style.css";
-import Header from "./Header";
-import Action from "./Action";
-import Options from "./Options";
-import Option from "./Option";
-import AddItem from "./AddItem";
-import OptionModal from "./OptionModal";
-import "./styles/styles.scss";
+import React, { Component } from 'react';
+import './style.css';
+import Header from './Header';
+import Action from './Action';
+import Options from './Options';
+import Option from './Option';
+import AddItem from './AddItem';
+import OptionModal from './OptionModal';
+import './styles/styles.scss';
 
 // const obj = {
 //   name: 'poornesh',
@@ -27,16 +27,19 @@ export default class App extends Component {
     };
   }
   componentDidMount() {
-    const json = localStorage.getItem("options");
-    const options = JSON.parse(json);
+    const json = localStorage.getItem('options');
+    let options = [];
+    if (json !== 'null') {
+      options = JSON.parse(json);
+    }
     this.setState(() => ({ options }));
   }
   componentDidUpdate() {
     const json = JSON.stringify(this.state.options);
-    localStorage.setItem("options", json);
+    localStorage.setItem('options', json);
   }
   render() {
-    const title = "IndecisionApp";
+    const title = 'IndecisionApp';
     const clearOptions = () => {
       this.setState(() => {
         return {
@@ -61,33 +64,32 @@ export default class App extends Component {
       });
     };
 
-    const addOption = (option) => {
+    const addOption = option => {
       if (!option) {
         this.setState(() => {
           return {
-            error: "Enter some value"
+            error: 'Enter some value'
           };
         });
       } else if (hasOptions() && this.state.options.includes(option)) {
         this.setState(() => {
           return {
-            error: "Item already exists"
+            error: 'Item already exists'
           };
         });
       } else {
-        // this.setState((prevState) => {
-        //   return {
-        //     options: prevState.options.concat(option),
-        //     error: null
-        //   };
-        // });
- 
+        this.setState(prevState => {
+          return {
+            options: prevState.options.concat(option),
+            error: null
+          };
+        });
       }
     };
-    const removeOption = (option) => {
+    const removeOption = option => {
       this.setState(() => {
         return {
-          options: this.state.options.filter((opt) => opt !== option)
+          options: this.state.options.filter(opt => opt !== option)
         };
       });
     };
