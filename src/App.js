@@ -27,12 +27,15 @@ export default class App extends Component {
     };
   }
   componentDidMount() {
-    const json = localStorage.getItem('options');
-    let options = [];
-    if (json !== 'null') {
-      options = JSON.parse(json);
+    try {
+      const json = localStorage.getItem('options');
+      if (json !== 'null') {
+        const options = JSON.parse(json);
+        this.setState(() => ({ options }));
+      }
+    } catch (e) {
+      // do nothing
     }
-    this.setState(() => ({ options }));
   }
   componentDidUpdate() {
     const json = JSON.stringify(this.state.options);
