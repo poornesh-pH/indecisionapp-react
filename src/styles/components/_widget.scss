@@ -1,11 +1,12 @@
 .widget-header {
   background-color: $green3;
-  color: $green4;
+  color: $white;
   display: flex;
   justify-content: space-between;
 }
 .widget-title {
   margin: 0;
-  padding-left: 10%;
-  padding-top: 2%;
+padding:2%;
+font-weight: 700;
+font-size:$m-size;
 }

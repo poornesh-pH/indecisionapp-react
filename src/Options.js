@@ -4,7 +4,7 @@ import Option from './Option';
 const Options = props => (
   <div>
     <div className="widget-header">
-      <h3 className="widget-title">Your Items</h3>
+      <p className="widget-title">Your Items</p>
       <button
         className="button button--link"
         onClick={props.clearOptions}
