@@ -2,7 +2,14 @@ html {
   font-size: 62.5%;
 }
 body {
+  background-color: $green1;
   font-family: Lato;
   font-size: $m-size;
-  background-color: $green1;
+}
+button{
+  cursor: pointer;
+  border-radius: 2px;
+}
+button:disabled{
+  cursor: default;
 }

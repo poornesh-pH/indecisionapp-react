@@ -104,18 +104,20 @@ export default class App extends Component {
     return (
       <div>
         <Header title={title} />
-        <Action
-          hasOptions={hasOptions() && this.state.options.length > 0}
-          handlePick={handlePick}
-          do={this.state.do}
-        />
-        <Options
-          options={this.state.options}
-          clearOptions={clearOptions}
-          removeOption={removeOption}
-        />
-        <Option />
-        <AddItem addOption={addOption} error={this.state.error} />
+        <div className="container">
+          <Action
+            hasOptions={hasOptions() && this.state.options.length > 0}
+            handlePick={handlePick}
+            do={this.state.do}
+          />
+          <Options
+            options={this.state.options}
+            clearOptions={clearOptions}
+            removeOption={removeOption}
+          />
+          <Option />
+          <AddItem addOption={addOption} error={this.state.error} />
+        </div>
         <OptionModal do={this.state.do} closeModal={closeModal} />
       </div>
     );

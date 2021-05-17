@@ -18,7 +18,9 @@ class AddItem extends Component {
       <div>
         <form onSubmit={formOnSubmit}>
           <input type="text" name="option" />
-          <button type="submit">Add Item</button>
+          <button className="button" type="submit">
+            Add Item
+          </button>
         </form>
         <p style={errorStyle}>{this.props.error}</p>
       </div>
