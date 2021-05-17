@@ -8,7 +8,7 @@
   margin-bottom: $xl-size;
   width: 100%;
 }
-.big-button:disabled{
+.big-button:disabled {
   opacity: 0.5;
 }
 .button {
@@ -16,13 +16,12 @@
   border: none;
   color: $white;
   border-bottom: 0.5rem solid lighten($green4, 15);
-  height:$xl-size;
-  padding:$s-size;
+  height: $xl-size;
+  padding: $s-size;
 }
-.button--link{
+.button--link {
   background: none;
   color: $green4;
-  padding: 0;
-  border:none;
-
+  padding: auto;
+  border: none;
 }
