@@ -3,7 +3,7 @@ import Option from './Option';
 
 const Options = props => (
   <div>
-  <h3>Your Items</h>
+    <h3>Your Items</h3>
     <button
       className="button button--link"
       onClick={props.clearOptions}
