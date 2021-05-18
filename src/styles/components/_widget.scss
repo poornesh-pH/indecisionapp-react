@@ -5,8 +5,17 @@
   justify-content: space-between;
 }
 .widget-title {
+  font-size: $m-size;
+  font-weight: 700;
   margin: 0;
-padding:2%;
-font-weight: 700;
-font-size:$m-size;
+  padding: 2%;
+}
+.widget {
+  background-color: lighten($green4, 50);
+}
+.widget__message {
+  border-bottom: 1px solid $green4;
+  color: $white;
+  padding: $m-size;
+  text-align: center;
 }

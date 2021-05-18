@@ -110,13 +110,15 @@ export default class App extends Component {
             handlePick={handlePick}
             do={this.state.do}
           />
-          <Options
-            options={this.state.options}
-            clearOptions={clearOptions}
-            removeOption={removeOption}
-          />
-          <Option />
-          <AddItem addOption={addOption} error={this.state.error} />
+          <div className="widget">
+            <Options
+              options={this.state.options}
+              clearOptions={clearOptions}
+              removeOption={removeOption}
+            />
+            <Option />
+            <AddItem addOption={addOption} error={this.state.error} />
+          </div>
         </div>
         <OptionModal do={this.state.do} closeModal={closeModal} />
       </div>

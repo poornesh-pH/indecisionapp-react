@@ -18,7 +18,7 @@ const Options = props => (
       <ol>
         {props.options &&
           props.options.map(item => (
-            <div key={item}>
+            <div key={item} className="options">
               <Option option={item} />
               <button
                 className="button button--link"
@@ -30,7 +30,7 @@ const Options = props => (
           ))}
       </ol>
     ) : (
-      <p>Add Items to get started</p>
+      <p className="widget__message">Add Items to get started</p>
     )}
   </div>
 );
