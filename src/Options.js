@@ -15,11 +15,11 @@ const Options = props => (
     </div>
 
     {props.options.length > 0 ? (
-      <ol>
+      <div className="options">
         {props.options &&
           props.options.map(item => (
-            <div key={item} className="options">
-              <Option option={item} />
+            <div key={item} className="options__option">
+              <Option option={item}/>
               <button
                 className="button button--link"
                 onClick={() => props.removeOption(item)}
@@ -28,7 +28,7 @@ const Options = props => (
               </button>
             </div>
           ))}
-      </ol>
+      </div>
     ) : (
       <p className="widget__message">Add Items to get started</p>
     )}

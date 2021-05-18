@@ -17,7 +17,7 @@ class AddItem extends Component {
     return (
       <div>
         <form onSubmit={formOnSubmit}>
-          <input type="text" name="option" />
+          <input type="text" name="option" className="addOption"/>
           <button className="button" type="submit">
             Add Item
           </button>

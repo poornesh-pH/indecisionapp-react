@@ -1,4 +1,10 @@
 .options {
+  padding: $s-size;
+}
+.options__option{
+  border-bottom: 1px solid $green4;
   display: flex;
   justify-content: space-between;
+}
+.addOption{
 }
