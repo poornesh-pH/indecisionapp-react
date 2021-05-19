@@ -6,7 +6,13 @@
   display: flex;
   justify-content: space-between;
 }
-.addOption {
+.add-option {
+  display: flex;
+  padding: $s-size;
+  margin-top: -20px;
+}
+.add-option__input {
+  flex-grow: 1;
 }
 .error-message {
   color: red;
