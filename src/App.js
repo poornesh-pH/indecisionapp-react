@@ -53,6 +53,7 @@ export default class App extends Component {
       });
     };
     const hasOptions = () => {
+      console.log(this.state.options);
       if (this.state.options !== null) return true;
       else return false;
     };
@@ -66,7 +67,6 @@ export default class App extends Component {
         };
       });
     };
-
     const addOption = option => {
       if (!option) {
         this.setState(() => {
@@ -118,7 +118,7 @@ export default class App extends Component {
               removeOption={removeOption}
             />
             <Option />
-            <AddItem addOption={addOption}/>
+            <AddItem addOption={addOption} />
           </div>
         </div>
         <OptionModal do={this.state.do} closeModal={closeModal} />
