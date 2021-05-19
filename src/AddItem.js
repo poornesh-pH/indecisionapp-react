@@ -11,18 +11,14 @@ class AddItem extends Component {
       this.props.addOption(option);
       e.target.elements.option.value = '';
     };
-    const errorStyle = {
-      color: 'red'
-    };
     return (
       <div>
         <form onSubmit={formOnSubmit}>
-          <input type="text" name="option" className="addOption"/>
+          <input type="text" name="option" className="addOption" />
           <button className="button" type="submit">
             Add Item
           </button>
         </form>
-        <p style={errorStyle}>{this.props.error}</p>
       </div>
     );
   }

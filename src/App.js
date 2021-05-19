@@ -110,6 +110,7 @@ export default class App extends Component {
             handlePick={handlePick}
             do={this.state.do}
           />
+          <p className="error-message">{this.state.error}</p>
           <div className="widget">
             <Options
               options={this.state.options}
@@ -117,7 +118,7 @@ export default class App extends Component {
               removeOption={removeOption}
             />
             <Option />
-            <AddItem addOption={addOption} error={this.state.error} />
+            <AddItem addOption={addOption}/>
           </div>
         </div>
         <OptionModal do={this.state.do} closeModal={closeModal} />
