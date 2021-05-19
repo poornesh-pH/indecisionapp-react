@@ -14,12 +14,12 @@ const Options = props => (
       </button>
     </div>
 
-    {props.options.length > 0 ? (
+    {(props.options && props.options.length) > 0 ? (
       <div className="options">
         {props.options &&
           props.options.map(item => (
             <div key={item} className="options__option">
-              <Option option={item}/>
+              <Option option={item} />
               <button
                 className="button button--link"
                 onClick={() => props.removeOption(item)}
