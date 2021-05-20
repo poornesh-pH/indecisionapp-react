@@ -29,7 +29,8 @@ export default class App extends Component {
   componentDidMount() {
     try {
       const json = localStorage.getItem('options');
-      if (json !== 'null') {
+      if (json !== null) {
+        console.log('inside');
         const options = JSON.parse(json);
         this.setState(() => ({ options }));
       }
@@ -53,7 +54,6 @@ export default class App extends Component {
       });
     };
     const hasOptions = () => {
-      console.log(this.state.options);
       if (this.state.options !== null) return true;
       else return false;
     };
