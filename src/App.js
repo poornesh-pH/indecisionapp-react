@@ -101,6 +101,13 @@ export default class App extends Component {
         return { do: null };
       });
     };
+    const clearErrorMsg =()=> {
+      this.setState(()=>{
+        return{
+          error:null
+        }
+      })
+    }
     return (
       <div>
         <Header title={title} />
@@ -118,7 +125,7 @@ export default class App extends Component {
               removeOption={removeOption}
             />
             <Option />
-            <AddItem addOption={addOption} />
+            <AddItem addOption={addOption} clearErrorMsg={clearErrorMsg}/>
           </div>
         </div>
         <OptionModal do={this.state.do} closeModal={closeModal} />

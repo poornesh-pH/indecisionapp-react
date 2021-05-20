@@ -14,7 +14,12 @@ class AddItem extends Component {
     return (
       <div>
         <form className="add-option" onSubmit={formOnSubmit}>
-          <input type="text" name="option" className="add-option__input" />
+          <input
+            type="text"
+            name="option"
+            className="add-option__input"
+            onFocus={this.props.clearErrorMsg}
+          />
           <button className="button" type="submit">
             Add Item
           </button>
