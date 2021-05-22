@@ -18,10 +18,20 @@
   border-bottom: 0.5rem solid lighten($green4, 15);
   height: $xl-size;
   padding: $s-size;
+  margin: 0 $s-size $s-size $s-size;
 }
 .button--link {
   background: none;
   color: $white;
   border: none;
   min-width: 30%;
+}
+@media (min-width: 45rem) {
+  // for large screens
+  .button {
+    margin-right: $s-size;
+  }
+  .button--link {
+    text-align: right;
+  }
 }
