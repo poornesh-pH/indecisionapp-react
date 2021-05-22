@@ -13,9 +13,13 @@ class OptionModal extends Component {
         contentLabel="Selected option"
         onRequestClose={this.props.closeModal}
         closeTimeoutMS={200}
+        className="modal"
       >
-        <p style={{ color: 'green' }}>{this.props.do}</p>
-        <button onClick={this.props.closeModal}>Close</button>
+        <h4 className="modal__title">Selected Item </h4>
+        <p className="modal__body">{this.props.do}</p>
+        <button onClick={this.props.closeModal} className="button">
+          Close
+        </button>
       </Modal>
     );
   }
