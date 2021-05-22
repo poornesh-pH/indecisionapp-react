@@ -1,7 +1,7 @@
 .header {
   background-color: $green3;
   color: $green4;
-  margin-bottom: $xl-size;
+  margin-bottom: $m-size;
   padding: $s-size 0;
 }
 .header__title {
@@ -12,4 +12,9 @@
   font-size: $m-size;
   font-weight: 500;
   color: $white;
+}
+@media (min-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $l-size;
+  }
 }
