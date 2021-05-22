@@ -30,7 +30,6 @@ export default class App extends Component {
     try {
       const json = localStorage.getItem('options');
       if (json !== null) {
-        console.log('inside');
         const options = JSON.parse(json);
         this.setState(() => ({ options }));
       }
@@ -101,13 +100,13 @@ export default class App extends Component {
         return { do: null };
       });
     };
-    const clearErrorMsg =()=> {
-      this.setState(()=>{
-        return{
-          error:null
-        }
-      })
-    }
+    const clearErrorMsg = () => {
+      this.setState(() => {
+        return {
+          error: null
+        };
+      });
+    };
     return (
       <div>
         <Header title={title} />
@@ -125,7 +124,7 @@ export default class App extends Component {
               removeOption={removeOption}
             />
             <Option />
-            <AddItem addOption={addOption} clearErrorMsg={clearErrorMsg}/>
+            <AddItem addOption={addOption} clearErrorMsg={clearErrorMsg} />
           </div>
         </div>
         <OptionModal do={this.state.do} closeModal={closeModal} />
