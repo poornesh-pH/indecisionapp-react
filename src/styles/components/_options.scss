@@ -9,17 +9,28 @@
 }
 .add-option {
   display: flex;
-  padding: $s-size;
+  flex-direction: column;
   margin-top: -20px;
 }
 .add-option__input {
-  flex-grow: 1;
-  margin-right: 5px;
   background-color: $green1;
   border: none;
+  flex-grow: 1;
+  margin-right: 0 $s-size 0;
+  padding: $s-size;
 }
 .error-message {
   color: red;
   margin: 0;
   padding-bottom: 5%;
+}
+
+@media (min-width: 45rem) {
+  .add-option {
+    flex-direction: row;
+    padding: $s-size;
+  }
+  .add-option__input {
+    margin-right: $s-size;
+  }
 }
