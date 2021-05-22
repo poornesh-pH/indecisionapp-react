@@ -18,14 +18,14 @@
 
 .modal {
   background: $green2;
-  color: $white;
+  color: $green4;
   outline: none;
   text-align: center;
   padding: $l-size;
   max-width: 30rem;
 }
 .modal__title {
-  color: $green4;
+  color: $white;
   margin: 0 0 $m-size 0;
 }
 .modal__body {
