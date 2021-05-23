@@ -109,6 +109,7 @@ export default class App extends Component {
     };
     return (
       <div>
+        <title>IndecisionApp</title>
         <Header title={title} />
         <div className="container">
           <Action
